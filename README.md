@@ -1,8 +1,2 @@
-# go_300
-
-Simple application to save money for KBTU Students
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+# Go300-flutter
+Mobile app for both iOS and Android.
