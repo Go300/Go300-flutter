@@ -7,10 +7,9 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService extends CommonService {
-  Future<Member> register(String username) async {
-    final response = await http.get(baseURL + "/api/member");
-
-    if (response.statusCode == 200) {
+  static Future<Member> register(String username) async {
+    final response = await http.post(CommonService.baseURL + "/api/members/", headers: {'content-type': 'application/json'}, body: json.encode({'username': username}));
+    if (response.statusCode == 201) {
       Member member = Member.fromJson(json.decode(response.body));
       return member;
     } else {
