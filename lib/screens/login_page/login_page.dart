@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_300/api/auth.dart';
 import 'package:go_300/screens/subscription_page/SubscriptionPage.dart';
 
 class LoginPage extends StatelessWidget {
 
-
+  final usernameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -21,6 +22,7 @@ class LoginPage extends StatelessWidget {
                   style: TextStyle(fontSize: 18.0)),
             ),
             TextField(
+              controller: usernameController,
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 30.0,
@@ -43,10 +45,10 @@ class LoginPage extends StatelessWidget {
   }
 
   signInClick(context) {
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(
+    AuthService().register(usernameController.text).then((member) =>
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (context) => SubscriptionPage(),
-      ),
-    );
+      ))
+    ).catchError((error) => AlertDialog(content: Text("asdf")));
   }
 }

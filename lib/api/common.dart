@@ -1,3 +1,3 @@
 class CommonService {
-  static String baseURL = "http://35.242.209.115";
+  String baseURL = "http://35.242.209.115";
 }

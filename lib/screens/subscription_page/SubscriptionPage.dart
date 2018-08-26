@@ -60,8 +60,8 @@ class SubscriptionPage extends StatelessWidget {
   Tab _buildTab(leftString, rightString) {
     return Tab(child: Center(
       child: Row(children: <Widget>[
-          Text(leftString),
-          Icon(Icons.swap_horiz),
+          Text(leftString, ),
+          Icon(Icons.swap_horiz, size: 18.0),
           Text(rightString),
         ],
         mainAxisAlignment: MainAxisAlignment.center,
