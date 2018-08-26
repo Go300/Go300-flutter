@@ -6,7 +6,7 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Material(
+    return Material(
       child: Column(
           children: <Widget>[
             Padding(
@@ -42,9 +42,9 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  signInClick(BuildContext context) {
+  signInClick(context) {
     Navigator.of(context).pushReplacement(
-      new MaterialPageRoute(
+      MaterialPageRoute(
         builder: (context) => SubscriptionPage(),
       ),
     );

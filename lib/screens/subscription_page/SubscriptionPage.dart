@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_300/models/AppConstants.dart';
 import 'package:go_300/models/Ride.dart';
 import 'package:go_300/screens/subscription_page/Widgets/TimedListWidget.dart';
+import 'package:go_300/screens/user_rides/UserRidesPage.dart';
 
 class SubscriptionPage extends StatelessWidget {
   @override
@@ -15,9 +16,9 @@ class SubscriptionPage extends StatelessWidget {
             title: Text(APP_NAME),
             bottom: TabBar(
                 tabs: <Tab>[
-                  buildTab(KBTU, SPORT),
-                  buildTab(KBTU, DORMITORY),
-                  buildTab(SPORT, DORMITORY),
+                  _buildTab(KBTU, SPORT),
+                  _buildTab(KBTU, DORMITORY),
+                  _buildTab(SPORT, DORMITORY),
                 ]
             )
         ),
@@ -29,14 +30,15 @@ class SubscriptionPage extends StatelessWidget {
           ],
         ),
         floatingActionButton: FloatingActionButton.extended(
-          elevation: 4.0,
+          elevation: 8.0,
           icon: const Icon(Icons.airport_shuttle),
           label: const Text('Мои поездки'),
-          onPressed: () {},
+          onPressed: () => _navigateToUserRides(context),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
-          child: new Row(
+          elevation: 10.0,
+          child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -55,7 +57,7 @@ class SubscriptionPage extends StatelessWidget {
     );
   }
 
-  Tab buildTab(leftString, rightString) {
+  Tab _buildTab(leftString, rightString) {
     return Tab(child: Center(
       child: Row(children: <Widget>[
           Text(leftString),
@@ -65,6 +67,13 @@ class SubscriptionPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
       ),
     ));
+  }
 
+  _navigateToUserRides(context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => UserRidesPage(),
+      ),
+    );
   }
 }
