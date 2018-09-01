@@ -8,9 +8,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService extends CommonService {
   Future<Member> register(String username) async {
-    final response = await http.get(baseURL + "/api/member");
+    // final response = await http.get(baseURL + "/api/member");
+    final response = await http
+        .post(Uri.http("10.0.2.2:3000", "/api"), body: {"username": username});
 
-    if (response.statusCode == 200) {
+    if (response.statusCode == 201) {
       Member member = Member.fromJson(json.decode(response.body));
       return member;
     } else {
@@ -31,5 +33,4 @@ class AuthService extends CommonService {
       token: prefs.getString("token"),
     );
   }
-
 }
