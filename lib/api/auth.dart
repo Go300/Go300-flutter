@@ -2,12 +2,17 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:go_300/api/common.dart';
+import 'package:go_300/models/AppConstants.dart';
 import 'package:go_300/models/Member.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService extends CommonService {
+
   Future<Member> register(String username) async {
+    if(DEV_MODE) {
+      return Member();
+    }
     // final response = await http.get(baseURL + "/api/member");
     final response = await http
         .post(Uri.http("10.0.2.2:3000", "/api"), body: {"username": username});

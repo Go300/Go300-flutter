@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_300/api/subscription.dart';
 import 'package:go_300/models/Ride.dart';
 import 'package:go_300/screens/subscription_page/Widgets/RideDescriptionCard.dart';
 import 'package:go_300/screens/subscription_page/Widgets/SubscriptionCard.dart';
@@ -11,20 +12,25 @@ class TimedListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> subscriptionList = _buildSubscriptionList();
+    List<SubscriptionCard> subscriptionList = _buildSubscriptionList();
     return ListView.builder(
       itemCount: 1 + subscriptionList.length,
       itemBuilder: (context, index) {
         if (index == 0) {
           return RideDescriptionCard(ride);
         } else {
-          return subscriptionList[index - 1];
+          return GestureDetector(
+            child: subscriptionList[index - 1],
+            onTap: (){
+              SubscriptionService().toggleSubscription(subscriptionList[index - 1].time)
+            },
+          );
         }
       }
     );
   }
 
-  List<Widget> _buildSubscriptionList() {
+  List<SubscriptionCard> _buildSubscriptionList() {
     List<SubscriptionCard> subscriptionList = [];
     for (int i = 0; i < 24; i++) {
       subscriptionList.add(SubscriptionCard(ride, TimeOfDay(hour: i, minute: 0)));

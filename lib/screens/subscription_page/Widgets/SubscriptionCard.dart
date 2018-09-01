@@ -19,7 +19,7 @@ class _SubscriptionCardState extends State<SubscriptionCard> {
     return Material(
       child: Card(
         child: InkWell(
-          onTap: () => {},
+//          onTap: () => {},
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
