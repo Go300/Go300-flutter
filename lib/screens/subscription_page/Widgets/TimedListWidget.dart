@@ -22,7 +22,7 @@ class TimedListWidget extends StatelessWidget {
               child: subscriptionList[index - 1],
               onTap: () {
                 SubscriptionService()
-                    .toggleSubscription(subscriptionList[index - 1].time);
+                    .toggleSubscription(subscriptionList[index - 1]);
               },
             );
           }
