@@ -22,7 +22,7 @@ class TimedListWidget extends StatelessWidget {
           return GestureDetector(
             child: subscriptionList[index - 1],
             onTap: (){
-              SubscriptionService().toggleSubscription(subscriptionList[index - 1].time)
+              SubscriptionService().toggleSubscription(subscriptionList[index - 1].time);
             },
           );
         }
