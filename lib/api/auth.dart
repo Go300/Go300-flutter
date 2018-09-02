@@ -15,6 +15,7 @@ class AuthService extends CommonService {
   AuthService._internal() {/* */}
 
   Future<Member> register(String username) async {
+    return Member(username: username, token: '');
     final response = await http.post(baseURL + "/api/members/",
         headers: {'content-type': 'application/json'},
         body: json.encode({'username': username}));
