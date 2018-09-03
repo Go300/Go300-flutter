@@ -1,3 +1,3 @@
 class CommonService {
-  String baseURL = "http://localhost:8000";
+  String _baseURL = "http://localhost:8000";
 }
