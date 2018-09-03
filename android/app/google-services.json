@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "871864949856",
+    "firebase_url": "https://go300-214513.firebaseio.com",
+    "project_id": "go300-214513",
+    "storage_bucket": "go300-214513.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871864949856:android:5119098ca33a62d4",
+        "android_client_info": {
+          "package_name": "inc.adefault.go300"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871864949856-bim0138pg81ujfve9dvnobe3lct376pf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6sQCMKl9Piw6ttcCwK41gtM2a2XtVy4s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

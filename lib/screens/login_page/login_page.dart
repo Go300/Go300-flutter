@@ -50,7 +50,7 @@ class LoginPage extends StatelessWidget {
   }
 
   signInClick(context) {
-    AuthService().register(usernameController.text).then((data) {
+    authService.register(usernameController.text).then((data) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (context) => SubscriptionPage(),
