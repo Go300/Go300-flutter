@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="18c45b63-5128-4e44-be7d-7efa6b70ba4a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/api/auth.dart" afterPath="$PROJECT_DIR$/lib/api/auth.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/api/common.dart" afterPath="$PROJECT_DIR$/lib/api/common.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/models/AppConstants.dart" afterPath="$PROJECT_DIR$/lib/models/AppConstants.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -32,14 +31,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="auth.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/api/auth.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="188">
+              <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
                 <element signature="e#22#42#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppConstants.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/models/AppConstants.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,7 +167,6 @@
         <option value="$PROJECT_DIR$/lib/screens/subscription_page/UserMenuDrawer.dart" />
         <option value="$PROJECT_DIR$/lib/models/Ride.dart" />
         <option value="$PROJECT_DIR$/lib/screens/subscription_page/Widgets/RideDescriptionCard.dart" />
-        <option value="$PROJECT_DIR$/lib/models/AppConstants.dart" />
         <option value="$PROJECT_DIR$/lib/screens/landing_page/landing_page.dart" />
         <option value="$PROJECT_DIR$/lib/screens/subscription_page/Widgets/TimedListWidget.dart" />
         <option value="$PROJECT_DIR$/lib/screens/subscription_page/Widgets/SubscriptionCard.dart" />
@@ -175,6 +183,7 @@
         <option value="$PROJECT_DIR$/lib/api/push_notifications.dart" />
         <option value="$PROJECT_DIR$/lib/api/common.dart" />
         <option value="$PROJECT_DIR$/lib/api/auth.dart" />
+        <option value="$PROJECT_DIR$/lib/models/AppConstants.dart" />
       </list>
     </option>
   </component>
@@ -671,13 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/models/AppConstants.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -801,11 +803,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/api/auth.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state relative-caret-position="188">
+          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="e#22#42#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/AppConstants.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
