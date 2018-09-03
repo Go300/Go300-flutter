@@ -16,13 +16,12 @@ class AuthService extends CommonService {
 
   Future<Member> register(String username) async {
 //    return Member(username: "NurlashKO", token: "test");
-    // final response = await http.get(_baseURL + "/api/member");
-    final response = await http
-        .post(Uri.http("10.0.2.2:3000", "/api"), body: {
-          "username": username,
-          "push_token": pushNotificationsService.getToken(),
-        });
+    var data = {
+      "username": username,
+      "push_token": pushNotificationsService.getToken(),
+    };
 
+    final response = await http.post(baseURL + "/api/member", body: data);
     if (response.statusCode == 201) {
       Member member = Member.fromJson(json.decode(response.body));
       return member;
