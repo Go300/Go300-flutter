@@ -27,6 +27,7 @@ class AuthService extends CommonService {
     final response = await http.post(baseURL + "/api/member", body: data);
     if (response.statusCode == 201) {
       Member member = Member.fromJson(json.decode(response.body));
+      saveMemberLocal(member);
       return member;
     } else {
       throw Exception('Failed to load post');
