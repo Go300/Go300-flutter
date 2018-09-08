@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_300/api/auth.dart';
+import 'package:go_300/api/auth_service.dart';
 import 'package:go_300/screens/subscription_page/SubscriptionPage.dart';
 
 class LoginPage extends StatelessWidget {

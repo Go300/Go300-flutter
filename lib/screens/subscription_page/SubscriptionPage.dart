@@ -61,7 +61,7 @@ class SubscriptionPage extends StatelessWidget {
     return Tab(child: Center(
       child: Row(children: <Widget>[
           Text(leftString),
-          Icon(Icons.swap_horiz),
+          Icon(Icons.swap_horiz, size: 16.0),
           Text(rightString),
         ],
         mainAxisAlignment: MainAxisAlignment.center,

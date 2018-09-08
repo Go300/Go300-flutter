@@ -16,7 +16,14 @@ class RideDescriptionCard extends StatelessWidget {
               onTap: () => {},
               child: Center(child: Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Text("${ride.from} > ${ride.to}", style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold)),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Text("${ride.from}", style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold)),
+                    Icon(Icons.arrow_right, size: 32.0),
+                    Text("${ride.to}", style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold)),
+                  ],
+                ),
               )),
             ),
           ),

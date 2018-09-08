@@ -13,6 +13,9 @@ class PushNotificationsService {
         FlutterUdid.consistentUdid.then((String uuid) {
           print(uuid);
         });
+        FlutterUdid.udid.then((String uuid) {
+          print("UUID : " + uuid);
+        });
         _firebaseMessaging.configure(
             onMessage: (Map<String, dynamic> message) async {
                 print("onMessage: $message");
