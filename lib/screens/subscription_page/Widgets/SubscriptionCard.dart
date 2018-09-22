@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_300/api/subscription_service.dart';
 import 'package:go_300/models/Ride.dart';
 
 class SubscriptionCard extends StatefulWidget {
@@ -17,7 +18,7 @@ class _SubscriptionCardState extends State<SubscriptionCard> {
     return Material(
       child: Card(
           child: InkWell(
-            onTap: () => {},
+            onTap: () => subscriptionService.toggleSubscription(Subscription(rite, time)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
