@@ -5,5 +5,13 @@
 .pub/
 
 build/
+*.iml         
+*.ipr        
+*.iws         
+.idea/      
+.idea
+ios/.generated/
+
+pubspec.lock 
 
 .flutter-plugins
