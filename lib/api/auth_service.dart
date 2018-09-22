@@ -24,7 +24,7 @@ class AuthService extends CommonService {
       "push_token": pushNotificationsService.getToken(),
     };
 
-    final response = await http.post(baseURL + "/api/member", body: data);
+    final response = await http.post(baseURL + "/api/members/", body: data);
     if (response.statusCode == 201) {
       Member member = Member.fromJson(json.decode(response.body));
       saveMemberLocal(member);
