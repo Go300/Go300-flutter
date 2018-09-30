@@ -28,7 +28,7 @@ class SubscriptionService extends CommonService {
       'member': member,
       'departure': ride.apiFrom(),
       'destination': ride.apiTo(),
-      'when': "${time.hour}:00"
+      'when': "${time.hour}:${time.minute}"
     });
     if (response.statusCode == 201) {
 //      return Subscription.fromJson(json.decode(response.body)[0]);
