@@ -18,7 +18,7 @@ class _SubscriptionCardState extends State<SubscriptionCard> {
     return Material(
       child: Card(
           child: InkWell(
-            onTap: () => subscriptionService.toggleSubscription(Subscription(rite, time)),
+            onTap: () => subscriptionService.toggleSubscription(widget.ride, widget.time),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[

@@ -16,12 +16,9 @@ class AuthService extends CommonService {
   AuthService._private();
 
   Future<Member> register(String username) async {
-    if (DEV_MODE) {
-      return Member(username: "NurlashKO", token: "test");
-    }
     var data = {
       "username": username,
-      "push_token": pushNotificationsService.getToken(),
+      "registration_id": pushNotificationsService.getToken(),
     };
 
     final response = await http.post(baseURL + "/api/members/", body: data);

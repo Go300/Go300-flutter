@@ -19,24 +19,22 @@ class SubscriptionService extends CommonService {
     //TODO
   }
 
-  Future<Subscription> toggleSubscription(Subscription subscription) async {
+  Future<Subscription> toggleSubscription(Ride ride, TimeOfDay time) async {
     var member = '';
-    authService.getMemberLocal().then((data) {
+    await authService.getMemberLocal().then((data) {
       member = data.token;
     });
-    final response = await http.post(baseURL + "/api/subscriptions/", headers: {
-      'content-type': 'application/json'
-    }, body: {
+    final response = await http.post(baseURL + "/api/subscriptions/", body: {
       'member': member,
-      'departure': subscription.ride.from,
-      'destination': subscription.ride.to,
-      'when': subscription.time.toString()
+      'departure': ride.apiFrom(),
+      'destination': ride.apiTo(),
+      'when': "${time.hour}:00"
     });
     if (response.statusCode == 201) {
 //      return Subscription.fromJson(json.decode(response.body)[0]);
         print("Subscribed");
     } else {
-      throw Exception('Failed to load post');
+      throw Exception('Failed to toggle subscription');
     }
   }
   
