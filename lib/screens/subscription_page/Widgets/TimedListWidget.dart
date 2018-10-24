@@ -25,9 +25,10 @@ class TimedListWidget extends StatelessWidget {
   }
 
   List<Widget> _buildSubscriptionList() {
+    var now = DateTime.now();
     List<SubscriptionCard> subscriptionList = [];
     for (int i = 0; i < 24; i++) {
-      subscriptionList.add(SubscriptionCard(ride, TimeOfDay(hour: i, minute: 0)));
+      subscriptionList.add(SubscriptionCard(ride, TimeOfDay(hour: (now.hour + i) % 24, minute: 0)));
     }
     return subscriptionList;
   }

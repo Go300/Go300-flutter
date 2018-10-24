@@ -3,7 +3,7 @@ import 'package:go_300/models/Ride.dart';
 
 class Subscription {
   Ride ride;
-  TimeOfDay time;
+  DateTime time;
 
   Subscription(this.ride, this.time);
 
